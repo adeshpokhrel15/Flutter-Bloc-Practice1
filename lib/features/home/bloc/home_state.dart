@@ -1,28 +1,25 @@
-// ignore_for_file: public_member_api_docs, sort_constructors_first
 part of 'home_bloc.dart';
 
 @immutable
 abstract class HomeState {}
 
-abstract class HomeActionState extends HomeState {}
+abstract class HomeActionState extends HomeState{}
 
-class HomeInitial extends HomeState {}
+class HomeInitial extends HomeState {} 
 
-class HomeLoadingState extends HomeState {}
 
-class HomeLoadedSuccessState extends HomeState {
-  final List<ProductDataModel> productDataModelList;
-  HomeLoadedSuccessState({
-    required this.productDataModelList,
-  });
-}
+// load gareko dekhaina
+class HomeLoadingState extends HomeState{}
 
-class HomeErrorState extends HomeState {}
+//fetch the data from the server when data is received  
+class HomeLoadedSuccesState extends HomeState{}
 
-class HomeNavigateToWishListPageActionState extends HomeActionState {}
+// when error occurs
+class HomeErrorState extends HomeState{}
 
-class HomeNavigateToCartPageActionState extends HomeActionState {}
+//navigate garna chai actions state use garne
+class HomeNavigateToWishlistPageActionState extends HomeActionState{}
 
-class HomeProductItemWishListedActionState extends HomeActionState {}
 
-class HomeProductItemWCartedActionState extends HomeActionState {}
+class HomeNavigateToCartActionState extends HomeActionState{}
+
